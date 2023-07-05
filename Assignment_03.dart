@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:svg';
 
 void main() {
 //// 1. Write a program that takes a list of numbers as input and prints the
@@ -92,103 +93,109 @@ void main() {
     if (i == 9) print("Get largest element : $i");
   }
 
-  ///7.Write a program that prints the multiplication table of a given number  using a for loop.
-  ///Example: Input: 5 Output:  5 x 1 = 5 5 x 2 = 10 5 x 3 = 15 ... 5 x 10 = 50
-  ///
+   ///7.Write a program that prints the multiplication table of a given number  using a for loop. 
+   ///Example: Input: 5 Output:  5 x 1 = 5 5 x 2 = 10 5 x 3 = 15 ... 5 x 10 = 50 
+   ///
 
-  int table_ = 5;
-  for (int i = 1; i <= 10; i++) {
+  int table_=5;
+  for(int i=1; i <= 10; i++){
     print("$table_ X $i = ${table_ * i}");
+
   }
 
   ///9.Implement a function that checks if a given string is a palindrome.
-  ///Example: Input: "radar" Output: "radar" is a palindrome.
-  ///
+ ///Example: Input: "radar" Output: "radar" is a palindrome.
+ ///
+ 
+    List<String> inputs = [
+    "radar"
+    ];
 
-  List<String> inputs = ["radar"];
+    for(String input in inputs){
+      if(input == "radar") print("$input is a palindrome");
 
-  for (String input in inputs) {
-    if (input == "radar") print("$input is a palindrome");
-  }
 
-  ///10.Write a program to display the cube of the number up to an integer.
-//Test Data : Input number of terms : 5 Expected Output :
-//Number is : 1 and cube of the 1 is :1 Number is : 2 and cube of the 2 is :8 Number is : 3 and cube of the 3 is :27 Number is : 4 and cube of the 4 is :64 Number is : 5 and cube of the 5 is :125
-
-  void displayCube(int numTerms) {
-    for (int i = 1; i <= numTerms; i++) {
-      int cube = i * i * i;
-      print('Number is: $i and cube of $i is: $cube');
     }
+
+///10.Write a program to display the cube of the number up to an integer. 
+//Test Data : Input number of terms : 5 Expected Output : 
+//Number is : 1 and cube of the 1 is :1 Number is : 2 and cube of the 2 is :8 Number is : 3 and cube of the 3 is :27 Number is : 4 and cube of the 4 is :64 Number is : 5 and cube of the 5 is :125 
+
+void displayCube(int numTerms) {
+  for (int i = 1; i <= numTerms; i++) {
+    int cube = i * i * i;
+    print('Number is: $i and cube of $i is: $cube');
   }
+}
 
-  int numTerms = 5;
-  displayCube(numTerms);
+int numTerms = 5;
+displayCube(numTerms);
 
-  ///11. Write a program to display a pattern like a right angle triangle using an
+
+///11. Write a program to display a pattern like a right angle triangle using an  
 //asterisk using loop. The pattern like : * ** *** ****
 //
 
-  void displayPattern(int n) {
-    for (int i = 1; i <= n; i++) {
-      String line = '';
-      for (int j = 1; j <= i; j++) {
-        line += '*';
-      }
-      print(line);
+ void displayPattern(int n) {
+  for (int i = 1; i <= n; i++) {
+    String line = '';
+    for (int j = 1; j <= i; j++) {
+      line += '*';
     }
+    print(line);
   }
-
+}
   int n = 4;
   displayPattern(n);
 
-  ///12. Write a program to display a pattern like a right angle triangle with a
-//number using loop. The pattern like : 1 12 123 1234
+
+///12. Write a program to display a pattern like a right angle triangle with a  
+//number using loop. The pattern like : 1 12 123 1234 
 
   void displayResults(int n_) {
-    for (int i = 1; i <= n_; i++) {
-      String line = '';
-      for (int j = 1; j <= i; j++) {
-        line += j.toString();
-      }
-      print(line);
+  for (int i = 1; i <= n_; i++) {
+    String line = '';
+    for (int j = 1; j <= i; j++) {
+      line += j.toString();
     }
+    print(line);
   }
+}
 
-  int n_ = 4;
-  displayResults(n_);
+int n_ = 4;
+displayResults(n_);
 
-//13. Write a program to make such a pattern like a right angle triangle with
-//a number which will repeat a number in a row. The pattern like :  1 22 333 4444
+//13. Write a program to make such a pattern like a right angle triangle with  
+//a number which will repeat a number in a row. The pattern like :  1 22 333 4444 
 
-  void displayRepeateNUmber(int r_) {
-    for (int i = 1; i <= r_; i++) {
-      String line = '';
-      for (int j = 1; j <= i; j++) {
-        line += i.toString();
-      }
-      print(line);
-    }
-  }
-
-  int r_ = 4;
-  displayRepeateNUmber(r_);
-
-//14. Write a program to make such a pattern like a right angle triangle with
-//the number increased by 1 using loop.. The pattern like :  1
-//2 3 4 5 6 7 8 9 10
-
-  void display(int ni) {
-    for (int i = 1; i <= ni; i++) {
-      String line = '';
+void displayRepeateNUmber(int r_) {
+  for (int i = 1; i <= r_; i++) {
+    String line = '';
+    for (int j = 1; j <= i; j++) {
       line += i.toString();
-
-      print(line);
     }
+    print(line);
   }
+}
 
-  int ni = 10;
-  display(ni);
+int r_ = 4;
+displayRepeateNUmber(r_);
+
+
+//14. Write a program to make such a pattern like a right angle triangle with  
+//the number increased by 1 using loop.. The pattern like :  1 
+//2 3 4 5 6 7 8 9 10 
+
+void display(int ni) {
+  for (int i = 1; i <= ni; i++) {
+    String line = '';
+    line += i.toString();
+    
+    print(line);
+  }
+}
+int ni = 10;
+display(ni);
 
   ///15.Write a program to make a pyramid pattern with numbers increased by
   ///1  1. 2 3  4 5 6  7 8 9 10
@@ -301,4 +308,156 @@ void main() {
       print(num_);
     }
   }
+
+///20. Write a program that counts the number of vowels in a given string
+//using a for loop and if-else condition.
+
+String inputString = "Programming is fun!";
+  int vowelCount = 0;
+
+  bool isVowel(String character) {
+  character = character.toLowerCase();
+
+  if (character == "a" ||
+      character == "e" ||
+      character == "i" ||
+      character == "o" ||
+      character == "u") {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+  for (int i = 0; i < inputString.length; i++) {
+    if (isVowel(inputString[i])) {
+      vowelCount++;
+    }
+  }
+
+  print("The number of vowels in the string is: $vowelCount");
+
+
+///21. Write a program that calculates the sum of the squares of all odd
+//numbers in a given list using a for loop and if-else condition.
+
+List<int> l_Num_ = [5, 8, 2, 10, 3, 1];
+  
+  if (l_Num_.isEmpty) {
+    print("The list is empty.");
+  } else {
+    int max = l_Num_[0];
+    int min = l_Num_[0];
+
+    for (int i = 1; i < l_Num_.length; i++) {
+      if (l_Num_[i] > max) {
+        max = l_Num_[i];
+      }
+
+      if (l_Num_[i] < min) {
+        min = l_Num_[i];
+      }
+    }
+
+    print("Maximum element: $max");
+    print("Minimum element: $min");
+  }
+//22. Write a program that takes a list of student details as input, where
+//each student is represented by a map containing their name, marks,
+//section, and roll number. The program should determine the grade of
+//each student based on their average score (assuming maximum marks
+//for each subject is 100) and print the student's name along with their
+//grade.
+//List<Map<String, dynamic>> studentDetails = [
+//{'name': 'John', 'marks': [80, 75, 90], 'section': 'A', 'rollNumber': 101},
+//{'name': 'Emma', 'marks': [95, 92, 88], 'section': 'B', 'rollNumber': 102},
+//{'name': 'Ryan', 'marks': [70, 65, 75], 'section': 'A', 'rollNumber': 103},];
+
+
+
+List<Map<String, dynamic>> studentDetails = [
+    {'name': 'John', 'marks': [80, 75, 90], 'section': 'A', 'rollNumber': 101},
+    {'name': 'Emma', 'marks': [95, 92, 88], 'section': 'B', 'rollNumber': 102},
+    {'name': 'Ryan', 'marks': [70, 65, 75], 'section': 'A', 'rollNumber': 103},
+  ];
+
+
+  String calculateGrade(double average) {
+  if (average >= 90) {
+    return 'A';
+  } else if (average >= 80) {
+    return 'B';
+  } else if (average >= 70) {
+    return 'C';
+  } else if (average >= 60) {
+    return 'D';
+  } else {
+    return 'F';
+  }
+}
+
+  for (var student in studentDetails) {
+    String name = student['name'];
+    List<int> marks = student['marks'];
+    int totalMarks = marks.reduce((a, b) => a + b);
+    double average = totalMarks / marks.length;
+    String grade = calculateGrade(average);
+
+    print("Name: $name, Grade: $grade");
+  }
+
+//24. Implement a code that finds the average of all the negative numbers in
+//a list using a for loop and if-else condition.
+
+List<int> l_num_ = [5, -8, 2, -10, 3, -1];
+  int negativeCount = 0;
+  int sum = 0;
+
+  for (int i = 0; i < l_num_.length; i++) {
+    if (l_num_[i] < 0) {
+      negativeCount++;
+      sum += l_num_[i];
+    }
+  }
+
+  if (negativeCount > 0) {
+    double average = sum / negativeCount;
+    print("Average of negative numbers: $average");
+  } else {
+    print("There are no negative numbers in the list.");
+  }
+
+  //25. Write a program that takes a list of integers as input and returns a new
+//list containing only the prime numbers from the original list. Implement
+//the solution using a for loop and logical operations.
+//Input: [4, 7, 10, 13, 16, 19, 22, 25, 28, 31]
+
+List<int> l_ = [4, 7, 10, 13, 16, 19, 22, 25, 28, 31];
+  List<int> primeNumbers_ = [];
+
+bool isPrime(int l_) {
+  if (l_ < 2) {
+    return false;
+  }
+
+  for (int i = 2; i <= l_ ~/ 2; i++) {
+    if (l_ % i == 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+  for (int number in l_) {
+    if (isPrime(number)) {
+      primeNumbers_.add(number);
+    }
+  }
+
+  print("Prime numbers: $primeNumbers_");
+
+
+}
+
+
